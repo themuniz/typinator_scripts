@@ -1,0 +1,18 @@
+#!/usr/local/bin/python3
+"""
+transform_upper
+Transform text to upper case.
+"""
+
+__author__ = "José Muñiz"
+__version__ = 1
+__license__ = "MIT"
+__script__ = "transform_upper"
+
+import sys
+import subprocess
+
+
+if __name__ == "__main__":
+    text = subprocess.run(['pbpaste'], encoding='utf-8', capture_output=True)
+    sys.stdout.write(f'{text.stdout.upper()}')
